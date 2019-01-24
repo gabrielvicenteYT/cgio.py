@@ -6,6 +6,8 @@ from io import StringIO
 
 
 class TestCase(unittest.TestCase):
+    maxDiff = None
+
     @contextmanager
     def assertOutput(self, expected, *, argv=["-"], strip_trailing=True):
         fake_stdout = StringIO()
