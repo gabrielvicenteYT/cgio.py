@@ -14,3 +14,14 @@ class DivisorsTest(TestCase):
             for i in range(1, 101):
                 print(' '.join(str(j) for j in range(1, i + 1) if i % j == 0))
 ```
+
+[Quine hole](https://code-golf.io/quine):
+
+```python
+from cgio import TestCase
+
+class QuineTest(TestCase):
+    def test(self):
+        self.assertQuine("""w="print('w='+chr(34)+w+chr(34)+chr(10)+w)"
+print('w='+chr(34)+w+chr(34)+chr(10)+w)""")
+```
