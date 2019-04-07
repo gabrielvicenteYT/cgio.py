@@ -1,3 +1,47 @@
+arabic_to_roman_args = [
+    "813",
+    "2176",
+    "757",
+    "407",
+    "1670",
+    "40",
+    "9",
+    "3828",
+    "3154",
+    "3368",
+    "168",
+    "1292",
+    "2383",
+    "2116",
+    "1202",
+    "900",
+    "2033",
+    "90",
+    "4",
+    "400",
+]
+
+arabic_to_roman = """DCCCXIII
+MMCLXXVI
+DCCLVII
+CDVII
+MDCLXX
+XL
+IX
+MMMDCCCXXVIII
+MMMCLIV
+MMMCCCLXVIII
+CLXVIII
+MCCXCII
+MMCCCLXXXIII
+MMCXVI
+MCCII
+CM
+MMXXXIII
+XC
+IV
+CD"""
+
 brainfuck_args = [
     "+++++++++++++++++++++++++[>++>+++>++++>+++++<<<<-]+++++++++++++++++++++++++>>+++++.>+.>-----------.------.<<<<---------------.",
     "+++++++++++++++++++++[>++>+++>++++>+++++>++++++<<<<<-]+++++++++++++++++++++>>>----.--------.++++++++.<<<-----------.",
@@ -1064,6 +1108,88 @@ niven_numbers = """1
 90
 100"""
 
+pangram_grep_args = [
+    "bpRSJzfWDQyaXgckILVunThEMO",
+    "ALl queStIoNs asKED By fIVe WatChed exPeRTs AmaZe tHe jUDGe.",
+    "HeY zaCH, ShOuRd i PRogram a hEx edItOr In jAva? why NoT sqR oR bRainF--k!",
+    "fiX PrObLEM qUIckLY wIth gaLvANIzED JetS.",
+    "gRumPy WizaRDs maKe toXic BRew foR THe EviL QuEeN AND jAck.",
+    "HOW raZorBAcK-juMpInG fRoGs CAN LeveL siX piQUeD GYmNAStS!",
+    "How RAZORBACk-JUmPinG FROgv Can LEVel ViX PiqUed gymNAvtv!",
+    "FoXy PArsObs QUiZ Abd caJoLe tHE LOVABly DIM WIki-girL.",
+    "jIM QuIckLY rEaLiQed tHAT THE BEAutIfUL GoWNs are EXpeNSivE.",
+    "JIm qUIcKly REALIZeD ThAt tHE beAutIFuL gOWNS Are exPENSIve.",
+    "bOreD? crAViNg A puB qUIz FIX? whY, JUSt comE to thE royal oak!",
+    "brAwnY godS JusT FLoCKEd UB to qUIZ And VeX him.",
+    "6>_4\"gV9lb?2!iC7=-m'FD30pH].o%@w+[8UNk&t1Es<az(x;$^y#)L,RJ\\5/*:",
+    "quIRky spUd BOys CaN jaV AFTEr ZapPInG fIVe WOrThY pOLYSIXES.",
+    "Bored? cRaVinG a puB qUIZ FIx? WPY, juSt COme tO TPE rOYAl Oak!",
+    "A quICK MOvEMeNt of The enemy wiLl jeoPArDIZe SiX guNbOATs.",
+    "bATtLE OF THERMOpYLAe: QuICK javeLin GRAzED Wry XErxEs.",
+    "THe WizARd QUickLY JinXED the gnomes GEForE tHEY vAPoRIZed.",
+    '"wHo am TakiNg ThE eBoNics QUiZ?", THE prOB JoViaLlY AxEd.',
+    "QUirky SPUd boyS CaN jAM aFTER ZAPpiNG FiVE WORThy pOlySixes.",
+    "BattLe Of THERMOPyLAe: quIcK JAvELIn aRaZeD wrY XErxes.",
+    "hEY zACH, sHoulD i pROgRAM a hEX EditoR IN Java? WHY noT Sql or BrAiNf--K!",
+    "jackie WIll bUDGET fOr the moST EXPeNsIvE zoOLOGy EqUipMenT.",
+    "JusT PoeTs WAx BOLdLY As KInGs anD queENS MarcH ovER FuZz.",
+    "BrAWNy goDs JuST flOCKED uP To QUIZ AnD VEX hIm.",
+    "A lArGe FawN JUmpED quicKLY odER WhiTe Zinc BOXeS.",
+    "BUck iN junE WE deLIVEREd OXYgEN EQUIPMent Of ThE SUme sIze.",
+    '"WhO aM TakIng the eBonIcS QUiZ?", THe PROF jOVIalLY AxeD.',
+    "A qUICk MoveMEnt of The EnEMY WilL JeOPaRtIZe SiX gUnBOats.",
+    "sIXty ziPs wERE quIckLy pickED FRoM THE WOvEn jUtE bag.",
+    "THE WIzaRD QuicKLy jiNxED The gNOMes BeForE THEY vApORiZed.",
+    "siXTY ZiPS TERe qUicKLY pICked FrOM THe ToVEn JUTE bAg.",
+    "czte, KINd, JOviAl, foXy PHySIQze, AmAZINg bEaztY? WOWSEr!",
+    "when ZOMBIeS arRIvE, qUiCkly fAx juDge pAt.",
+    "JaCK Quietly moVED UP fRoNt ANd SEizeD the Big baLl Of wax.",
+    "GruMPY wiZARDS MakE BoXiC BrEw For Bhe EviL Queen AND JaCk.",
+    "the quIcK BrOWn FOX jumpS Over tHE LAzY dOG.",
+    "MY faued joKE WOn a PaGer In thE Cable TV quiz sHOW.",
+    "my FaXEd JOKE Won A PAGeR in THE CAbLe Tv QUIz sHow.",
+    "BPRsjzfwDqBaXGcKIlvUNThEMo",
+    "FoxY ParSons QUIz AND CAjole The loVAbly Dim WIkI-giRL.",
+    "JaCX qUIETlY MOvED uP FrONt ANd SeIZED THe BiG bALl oF waX.",
+    "CUTe, KInd, JovIal, FOxY phYsIQUe, aMazing BEAUTy? WowsER!",
+    "fIX pROBleM quICklY wItH gALVaNized fETS.",
+    "JuSt pEETs WaX BElDlY aS KiNGS aNd QUeeNS MARch eveR fuZZ.",
+    "JAnKIe WILl bUDGet foR The MoSt eXpeNsiVE zoology EquiPmEnt.",
+    "bAck IN juNe wE DeLIVErEd oxyGEn eQuiPmEnt oF thE saME SiZe.",
+    "A Large faWn JUmpEd QuIcKLy OVER WHITe ziNc BOXEs.",
+    "6>_4\"Gv9lB?2!ic7=-m'fD30Ph].O%@W+[8unK&t1eS<AZ(x;$^Y#)Q,rJ\\5/*:",
+    "aLL QuSStioNS ASksd bY fIvS wATchsD sxPsRts aMAzS THS jUDgs.",
+    "WHeN ZombIES ASsiVe, QUiCKly faX JUDge pAt.",
+    "the qUycK BrOwN fOx jumpS ovEr THe lAZy DOg.",
+]
+
+pangram_grep = """bpRSJzfWDQyaXgckILVunThEMO
+ALl queStIoNs asKED By fIVe WatChed exPeRTs AmaZe tHe jUDGe.
+fiX PrObLEM qUIckLY wIth gaLvANIzED JetS.
+gRumPy WizaRDs maKe toXic BRew foR THe EviL QuEeN AND jAck.
+HOW raZorBAcK-juMpInG fRoGs CAN LeveL siX piQUeD GYmNAStS!
+JIm qUIcKly REALIZeD ThAt tHE beAutIFuL gOWNS Are exPENSIve.
+bOreD? crAViNg A puB qUIz FIX? whY, JUSt comE to thE royal oak!
+A quICK MOvEMeNt of The enemy wiLl jeoPArDIZe SiX guNbOATs.
+bATtLE OF THERMOpYLAe: QuICK javeLin GRAzED Wry XErxEs.
+QUirky SPUd boyS CaN jAM aFTER ZAPpiNG FiVE WORThy pOlySixes.
+hEY zACH, sHoulD i pROgRAM a hEX EditoR IN Java? WHY noT Sql or BrAiNf--K!
+jackie WIll bUDGET fOr the moST EXPeNsIvE zoOLOGy EqUipMenT.
+JusT PoeTs WAx BOLdLY As KInGs anD queENS MarcH ovER FuZz.
+BrAWNy goDs JuST flOCKED uP To QUIZ AnD VEX hIm.
+"WhO aM TakIng the eBonIcS QUiZ?", THe PROF jOVIalLY AxeD.
+sIXty ziPs wERE quIckLy pickED FRoM THE WOvEn jUtE bag.
+THE WIzaRD QuicKLy jiNxED The gNOMes BeForE THEY vApORiZed.
+when ZOMBIeS arRIvE, qUiCkly fAx juDge pAt.
+JaCK Quietly moVED UP fRoNt ANd SEizeD the Big baLl Of wax.
+the quIcK BrOWn FOX jumpS Over tHE LAzY dOG.
+my FaXEd JOKE Won A PAGeR in THE CAbLe Tv QUIz sHow.
+FoxY ParSons QUIz AND CAjole The loVAbly Dim WIkI-giRL.
+CUTe, KInd, JovIal, FOxY phYsIQUe, aMazing BEAUTy? WowsER!
+bAck IN juNe wE DeLIVErEd oxyGEn eQuiPmEnt oF thE saME SiZe.
+A Large faWn JUmpEd QuIcKLy OVER WHITe ziNc BOXEs.
+6>_4"Gv9lB?2!ic7=-m'fD30Ph].O%@W+[8unK&t1eS<AZ(x;$^Y#)Q,rJ\\5/*:"""
+
 odious_numbers = """1
 2
 4
@@ -1152,6 +1278,72 @@ phi = "1.61803398874989484820458683436563811772030917980576286213544862270526046
 
 pi = "3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679821480865132823066470938446095505822317253594081284811174502841027019385211055596446229489549303819644288109756659334461284756482337867831652712019091456485669234603486104543266482133936072602491412737245870066063155881748815209209628292540917153643678925903600113305305488204665213841469519415116094330572703657595919530921861173819326117931051185480744623799627495673518857527248912279381830119491298336733624406566430860213949463952247371907021798609437027705392171762931767523846748184676694051320005681271452635608277857713427577896091736371787214684409012249534301465495853710507922796892589235420199561121290219608640344181598136297747713099605187072113499999983729780499510597317328160963185950244594553469083026425223082533446850352619311881710100031378387528865875332083814206171776691473035982534904287554687311595628638823537875937519577818577805321712268066130019278766111959092164201989"
 
+poker_args = [
+    "🃋🂸🂪🂻🃛",
+    "🂭🂽🃝🃃🃍",
+    "🃑🃕🂲🂽🃁",
+    "🂣🂢🂡🂥🂤",
+    "🂫🂭🂨🂪🂩",
+    "🂭🂺🂫🂮🃙",
+    "🂷🂹🃂🃒🂢",
+    "🃔🃒🃃🂵🂱",
+    "🃄🃘🂥🂨🃕",
+    "🃈🃊🃅🃍🃎",
+    "🂧🃇🂸🂷🃗",
+    "🂥🃆🃖🃅🃗",
+    "🂮🂪🂡🂭🂫",
+    "🃚🃋🂻🂺🂪",
+    "🂷🂲🂺🂹🂻",
+    "🃕🂩🂽🂪🂳",
+    "🂽🂱🂾🂻🂺",
+    "🃎🃂🃈🃁🃆",
+    "🂲🃅🂪🃋🂢",
+    "🂵🂴🂲🂱🂳",
+    "🃙🂩🃎🂫🃛",
+    "🃗🃇🂧🃎🂾",
+    "🃞🂮🃎🂩🂱",
+    "🃚🃕🂦🃇🂫",
+    "🃎🃇🃋🃉🂸",
+    "🃍🃁🃋🃎🃊",
+    "🃛🃑🃚🃞🃝",
+    "🃈🂸🃘🂾🂨",
+    "🂵🃚🃎🂭🃍",
+    "🃊🂾🂻🃍🂡",
+    "🂳🃃🃓🃄🂴",
+]
+
+poker = """Three of a Kind
+Four of a Kind
+Pair
+Straight Flush
+Straight Flush
+Straight
+Three of a Kind
+Straight
+Two Pair
+Flush
+Four of a Kind
+Two Pair
+Royal Flush
+Full House
+Flush
+High Card
+Royal Flush
+Flush
+Pair
+Straight Flush
+Two Pair
+Full House
+Three of a Kind
+High Card
+High Card
+Royal Flush
+Royal Flush
+Four of a Kind
+Pair
+Straight
+Full House"""
+
 prime_numbers = """2
 3
 5
@@ -1177,6 +1369,50 @@ prime_numbers = """2
 83
 89
 97"""
+
+roman_to_arabic_args = [
+    "CM",
+    "MDCCCLV",
+    "DLXXXIII",
+    "MMDCLIX",
+    "XL",
+    "MMDLXV",
+    "MMCCLXX",
+    "CD",
+    "MDCCXCIV",
+    "MCCCII",
+    "IX",
+    "MMMCCLVIII",
+    "LXX",
+    "IV",
+    "MCDLXVIII",
+    "MDLXXXIV",
+    "MMMCDLXXI",
+    "MMMCDXCIX",
+    "XC",
+    "MMDCCLXXV",
+]
+
+roman_to_arabic = """900
+1855
+583
+2659
+40
+2565
+2270
+400
+1794
+1302
+9
+3258
+70
+4
+1468
+1584
+3471
+3499
+90
+2775"""
 
 rule_110 = """                                                                                                   █
                                                                                                   ██
@@ -1279,6 +1515,12 @@ rule_110 = """                                                                  
  ███     ██    █  ██      ████████ ████  ██ ██     █ ████   █  ██ █████ █ ███       ████ █ █████   █
 ██ █    ███   ██ ███     ██      ███  █ ██████    ████  █  ██ █████   █████ █      ██  █████   █  ██"""
 
+seven_segment_args = ["33014665281295784079"]
+
+seven_segment = """ _  _  _        _  _  _  _  _     _  _  _  _  _     _  _  _
+ _| _|| |  ||_||_ |_ |_  _||_|  | _||_||_   ||_||_|| |  ||_|
+ _| _||_|  |  ||_||_| _||_ |_|  ||_  _| _|  ||_|  ||_|  | _|"""
+
 sierpinski_triangle = """
                ▲
               ▲ ▲
@@ -1296,6 +1538,118 @@ sierpinski_triangle = """
   ▲ ▲     ▲ ▲     ▲ ▲     ▲ ▲
  ▲   ▲   ▲   ▲   ▲   ▲   ▲   ▲
 ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲"""
+
+spelling_numbers_args = [
+    "19",
+    "2",
+    "135",
+    "16",
+    "1000",
+    "17",
+    "3",
+    "5",
+    "14",
+    "13",
+    "43",
+    "834",
+    "35",
+    "53",
+    "18",
+    "390",
+    "9",
+    "11",
+    "94",
+    "434",
+    "74",
+    "930",
+    "8",
+    "284",
+    "627",
+    "12",
+    "0",
+    "1",
+    "15",
+    "7",
+    "6",
+    "702",
+    "28",
+    "60",
+    "500",
+    "86",
+    "10",
+    "4",
+]
+
+spelling_numbers = """nineteen
+two
+one hundred and thirty-five
+sixteen
+one thousand
+seventeen
+three
+five
+fourteen
+thirteen
+forty-three
+eight hundred and thirty-four
+thirty-five
+fifty-three
+eighteen
+three hundred and ninety
+nine
+eleven
+ninety-four
+four hundred and thirty-four
+seventy-four
+nine hundred and thirty
+eight
+two hundred and eighty-four
+six hundred and twenty-seven
+twelve
+zero
+one
+fifteen
+seven
+six
+seven hundred and two
+twenty-eight
+sixty
+five hundred
+eighty-six
+ten
+four"""
+
+sudoku_args = [
+    "__54_9__1",
+    "____25_6_",
+    "1__87____",
+    "6_4_83_1_",
+    "____5____",
+    "8__2_143_",
+    "__3_6__25",
+    "58___2___",
+    "_76___1_3",
+]
+
+sudoku = """┏━━━┯━━━┯━━━┳━━━┯━━━┯━━━┳━━━┯━━━┯━━━┓
+┃ 7 │ 6 │ 5 ┃ 4 │ 3 │ 9 ┃ 2 │ 8 │ 1 ┃
+┠───┼───┼───╂───┼───┼───╂───┼───┼───┨
+┃ 9 │ 3 │ 8 ┃ 1 │ 2 │ 5 ┃ 7 │ 6 │ 4 ┃
+┠───┼───┼───╂───┼───┼───╂───┼───┼───┨
+┃ 1 │ 4 │ 2 ┃ 8 │ 7 │ 6 ┃ 3 │ 5 │ 9 ┃
+┣━━━┿━━━┿━━━╋━━━┿━━━┿━━━╋━━━┿━━━┿━━━┫
+┃ 6 │ 9 │ 4 ┃ 7 │ 8 │ 3 ┃ 5 │ 1 │ 2 ┃
+┠───┼───┼───╂───┼───┼───╂───┼───┼───┨
+┃ 3 │ 2 │ 1 ┃ 6 │ 5 │ 4 ┃ 9 │ 7 │ 8 ┃
+┠───┼───┼───╂───┼───┼───╂───┼───┼───┨
+┃ 8 │ 5 │ 7 ┃ 2 │ 9 │ 1 ┃ 4 │ 3 │ 6 ┃
+┣━━━┿━━━┿━━━╋━━━┿━━━┿━━━╋━━━┿━━━┿━━━┫
+┃ 4 │ 1 │ 3 ┃ 9 │ 6 │ 7 ┃ 8 │ 2 │ 5 ┃
+┠───┼───┼───╂───┼───┼───╂───┼───┼───┨
+┃ 5 │ 8 │ 9 ┃ 3 │ 1 │ 2 ┃ 6 │ 4 │ 7 ┃
+┠───┼───┼───╂───┼───┼───╂───┼───┼───┨
+┃ 2 │ 7 │ 6 ┃ 5 │ 4 │ 8 ┃ 1 │ 9 │ 3 ┃
+┗━━━┷━━━┷━━━┻━━━┷━━━┷━━━┻━━━┷━━━┷━━━┛"""
 
 tau = "6.2831853071795864769252867665590057683943387987502116419498891846156328125724179972560696506842341359642961730265646132941876892191011644634507188162569622349005682054038770422111192892458979098607639288576219513318668922569512964675735663305424038182912971338469206972209086532964267872145204982825474491740132126311763497630418419256585081834307287357851807200226610610976409330427682939038830232188661145407315191839061843722347638652235862102370961489247599254991347037715054497824558763660238982596673467248813132861720427898927904494743814043597218874055410784343525863535047693496369353388102640011362542905271216555715426855155792183472743574429368818024499068602930991707421015845593785178470840399122242580439217280688363196272595495426199210374144226999999967459560999021194634656321926371900489189106938166052850446165066893700705238623763420200062756775057731750664167628412343553382946071965069808575109374623191257277647075751875039155637155610643424536132260038557532223918184328403978"
 
